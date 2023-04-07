@@ -4,7 +4,6 @@ import cuk.corebasic.AutoAppConfig;
 import cuk.corebasic.discount.DiscountPolicy;
 import cuk.corebasic.member.Grade;
 import cuk.corebasic.member.Member;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
