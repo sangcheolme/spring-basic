@@ -1,26 +1,20 @@
 package cuk.corebasic.order;
 
+import cuk.corebasic.annotation.MainDiscountPolicy;
 import cuk.corebasic.discount.DiscountPolicy;
 import cuk.corebasic.member.Member;
 import cuk.corebasic.member.MemberRepository;
-import cuk.corebasic.member.MemberService;
-import cuk.corebasic.member.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class OrderServiceImpl implements OrderService {
 
-    private final MemberRepository memberRepository;
-    private final DiscountPolicy discountPolicy;
+    private MemberRepository memberRepository;
+    private DiscountPolicy discountPolicy;
 
-    //테스트 용도
-    public MemberRepository getMemberRepository() {
-        return memberRepository;
-    }
-
-    @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository,
+                            @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }

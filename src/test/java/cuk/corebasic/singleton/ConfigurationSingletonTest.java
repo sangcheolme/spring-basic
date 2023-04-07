@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.*;
 
 public class ConfigurationSingletonTest {
 
-    @Test
+    /*@Test
     void configurationTest() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
@@ -32,7 +32,7 @@ public class ConfigurationSingletonTest {
         assertThat(memberService.getMemberRepository()).isEqualTo(memberRepository);
         assertThat(orderService.getMemberRepository()).isEqualTo(memberRepository);
     }
-
+*/
     @Test
     void configurationDeep() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);

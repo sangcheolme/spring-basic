@@ -9,6 +9,7 @@ import cuk.corebasic.member.MemberServiceImpl;
 import cuk.corebasic.member.MemoryMemberRepository;
 import cuk.corebasic.order.OrderService;
 import cuk.corebasic.order.OrderServiceImpl;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
